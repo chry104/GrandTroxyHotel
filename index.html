@@ -30,22 +30,33 @@
     </div>
 
     <div class="stanze">
-
         <div class="titolo2">
             <h2>Listino stanze</h2>
         </div>
         
-        <form class="stanza-form" id="standard-form">
+        <div class="form-container"> <!-- Aggiungi un contenitore per i form -->
+            <form class="stanza-form" id="standard-form">
+                
             <h3>Stanza Standard</h3>
             <p>Prezzo: €100 a notte</p>
-            <p>Caratteristiche: Letto matrimoniale, Wi-Fi gratuito, TV a schermo piatto.</p>  
-        </form>
-        
-        <form class="stanza-form" id="exclusive-form">
-            <h3>Stanza Exclusive</h3>
-            <p>Prezzo: €150 a notte</p>
-            <p>Caratteristiche: Letto king-size, Wi-Fi gratuito, minibar, vista mare.</p>
-        </form>
+            <p>Caratteristiche</p>
+
+            <div class="lista">
+                <li>Letto matrimoniale</li>
+                <li>Wi-Fi gratuito</li>
+                <li>Aria condizionata</li>
+                <li>Set cortesia</li>
+                <li>TV 55 pollici</li>
+            </div>
+            </form>
+    
+            <form class="stanza-form" id="exclusive-form">
+                <h3>Stanza Exclusive</h3>
+                <p>Prezzo: €150 a notte</p>
+                <p>Caratteristiche: Letto king-size, Wi-Fi gratuito, minibar, vista mare.</p>
+            </form>
+        </div>
+    </div>
         
 
     <script src="gestione_hotel.js"></script>
