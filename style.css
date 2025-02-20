@@ -1,0 +1,118 @@
+html, body {
+    height: 100%; /* Imposta l'altezza al 100% */
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: beige;
+    margin: 0; 
+    padding: 0;
+    background-image: url('https://img-cdn.pixlr.com/image-generator/history/67b6ec1e7ff75d2cacf6c5e9/a7c4e48f-2a1d-4880-a9e4-b6012c412442/preview.webp');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: ""; /* Necessario per creare un elemento pseudo */
+    position: absolute; /* Posiziona l'elemento in modo assoluto */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://img-cdn.pixlr.com/image-generator/history/67b6ec1e7ff75d2cacf6c5e9/a7c4e48f-2a1d-4880-a9e4-b6012c412442/preview.webp');
+    background-size: cover; /* Rende l'immagine di sfondo coprente */
+    background-repeat: no-repeat; 
+    background-position: center; 
+    filter: blur(3px); /* Applica il filtro di sfocatura */
+    z-index: -1; /* Assicura che l'elemento sia dietro il contenuto */
+}
+
+.servizi {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    padding: 0 20px; /* Aggiunto padding laterale per distanziare i pulsanti dai bordi */
+}
+
+.servizio-btn {
+    background-color: transparent; /* Sfondo trasparente per i pulsanti */
+    color: white; /* Colore del testo */
+    padding: 10px 15px; /* Padding interno per i pulsanti */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+    border: none; /* Rimuove il bordo dai pulsanti */
+}
+
+.titolo{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.titolo2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+
+.form-container {
+    display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
+    justify-content: space-around; /* Spazio uniforme tra i form */
+    margin: 20px 0; /* Margine superiore e inferiore per distanziare i form dal titolo */
+}
+
+.stanza-form {
+    border: 1px solid #ccc; /* Bordo grigio chiaro attorno ai form */
+    border-radius: 10px; /* Angoli arrotondati */
+    padding: 20px; /* Padding interno per i form */
+    width: 30%; /* Larghezza dei form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
+    background-color: #f9f9f9; /* Colore di sfondo chiaro per i form */
+    transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
+}
+
+.stanza-form:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombra più intensa al passaggio del mouse */
+}
+
+.stanza-form h3 {
+    margin-top: 0; /* Rimuove il margine superiore dal titolo del form */
+    font-family: 'Arial', sans-serif; /* Font per il titolo */
+    color: #333; /* Colore del testo del titolo */
+}
+
+.stanza-form label {
+    display: block; /* Rende le etichette a blocco per una migliore disposizione */
+    margin: 10px 0 5px; /* Margine per distanziare le etichette dai campi di input */
+    font-weight: bold; /* Grassetto per le etichette */
+}
+
+.stanza-form input {
+    width: 100%; /* Larghezza completa per i campi di input */
+    padding: 10px; /* Padding interno per i campi di input */
+    border: 1px solid #ccc; /* Bordo grigio chiaro per i campi di input */
+    border-radius: 5px; /* Angoli arrotondati per i campi di input */
+    font-size: 16px; /* Dimensione del font per i campi di input */
+}
+
+.stanza-form button {
+    background-color: #007BFF; /* Colore di sfondo blu per il pulsante */
+    color: white; /* Colore del testo del pulsante */
+    padding: 10px; /* Padding interno per il pulsante */
+    border: none; /* Rimuove il bordo del pulsante */
+    border-radius: 5px; /* Angoli arrotondati per il pulsante */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+    margin-top: 10px; /* Margine superiore per distanziare il pulsante dagli input */
+    font-size: 16px; /* Dimensione del font per il pulsante */
+    transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+}
