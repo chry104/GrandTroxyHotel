@@ -1,5 +1,5 @@
 html, body {
-    height: 100%; /* Imposta l'altezza al 100% */
+    height: 90%;
     margin: 0; 
     padding: 0;
 }
@@ -52,21 +52,11 @@ body::before {
 }
 
 .titolo{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
     text-align: center;
     font-size: 40px;
     color: white;
 }
-
-.titolo2{
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 25px;
-    color: white;
-}
-
-
-
 
 .form-container {
     display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
@@ -76,12 +66,13 @@ body::before {
 }
 
 .stanze {
-    margin: 20px 0; /* Margine superiore e inferiore per distanziare il contenitore */
+    margin: 4px 0; /* Margine superiore e inferiore per distanziare il contenitore */
     text-align: center; /* Centra il contenuto all'interno del contenitore */
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
 .titolo2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
     font-size: 25px;
     color: white;
     margin-bottom: 20px; /* Aggiungi margine inferiore per distanziare il titolo dai form */
@@ -94,7 +85,6 @@ body::before {
 }
 
 .stanza-form {
-    border: 1px solid #ccc; /* Bordo grigio chiaro attorno ai form */
     border-radius: 10px; /* Angoli arrotondati */
     padding: 20px; /* Padding interno per i form */
     width: 300px; /* Imposta una larghezza fissa per i form */
@@ -105,4 +95,90 @@ body::before {
 
 .lista{
     text-align: left;
+}
+
+.navigazione {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    padding: 0 20px; /* Aggiunto padding laterale per distanziare i pulsanti dai bordi */
+}
+
+.nav-btn {
+    background-color: transparent; /* Sfondo trasparente per i pulsanti */
+    color: white; /* Colore del testo */
+    padding: 10px 15px; /* Padding interno per i pulsanti */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+    border: none; /* Rimuove il bordo dei pulsanti */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+.titolo3 {
+    text-align: center; /* Centra il titolo */
+    margin-top: 80px; /* Margine superiore per distanziare dal menu */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.login-form-container {
+    display: flex;
+    justify-content: center; /* Centra il form orizzontalmente */
+    align-items: center; /* Centra il form verticalmente */
+    height: 4   00px; /* Altezza del viewport meno l'altezza della barra di navigazione */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.login-form {
+    border: 1px solid #ccc; /* Bordo grigio chiaro attorno al form */
+    border-radius: 10px; /* Angoli arrotondati */
+    padding: 40px; /* Padding interno per il form */
+    width: 400px; /* Larghezza del form */
+    background-color: #f9f9f9; /* Colore di sfondo chiaro per il form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il form */
+    text-align: center; /* Centra il testo all'interno del form */
+}
+
+.login-form h3 {
+    margin-top: 0; /* Rimuove il margine superiore dal titolo del form */
+    font-family: 'Arial', sans-serif; /* Font per il titolo */
+    color: #333; /* Colore del testo del titolo */
+}
+
+.login-form label {
+    display: block; /* Rende le etichette a blocco per una migliore disposizione */
+    margin: 15 px 0 5px; /* Margine per distanziare le etichette dai campi di input */
+    font-weight: bold; /* Grassetto per le etichette */
+}
+
+.login-form input {
+    width: 100%; /* Larghezza completa per i campi di input */
+    padding: 10px; /* Padding interno per i campi di input */
+    margin-bottom: 15px; /* Margine infe    riore per distanziare i campi */
+    border: 1px solid #ccc; /* Bordo grigio chiaro per i campi di input */
+    border-radius: 5px; /* Angoli arrotondati per i campi di input */
+}
+
+.login-form button {
+    background-color: #4CAF50; /* Colore di sfondo verde per il pulsante */
+    color: white; /* Colore del testo del pulsante */
+    padding: 10px 20px; /* Padding interno per il pulsante */
+    border: none; /* Rimuove il bordo del pulsante */
+    border-radius: 5px; /* Angoli arrotondati per il pulsante */
+    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+    font-size: 16px; /* Dimensione del font per il pulsante */
+    transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+}
+
+.login-form button:hover {
+    background-color: #45a049; /* Colore di sfondo più scuro al passaggio del mouse */
+}
+
+.login-form p {
+    margin-top: 15px; /* Margine superiore per il paragrafo */
 }
