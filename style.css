@@ -1,184 +1,260 @@
-html, body {
-    height: 90%;
-    margin: 0; 
-    padding: 0;
-}
+    html, body {
+        height: 90%;
+        margin: 0; 
+        padding: 0;
+    }
 
-body {
-    background-color: beige;
-    margin: 0; 
-    padding: 0;
-    background-image: url('https://img-cdn.pixlr.com/image-generator/history/67b6ec1e7ff75d2cacf6c5e9/a7c4e48f-2a1d-4880-a9e4-b6012c412442/preview.webp');
-    background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    margin: 0;
-    padding: 0;
-}
+    img.logo {
+        width: 100px;  /* Regola la larghezza */
+        height: auto;  /* Mantiene le proporzioni */
+        margin: 10px 10px; /* Spaziatura */
+    }
 
-body::before {
-    content: ""; /* Necessario per creare un elemento pseudo */
-    position: absolute; /* Posiziona l'elemento in modo assoluto */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://img-cdn.pixlr.com/image-generator/history/67b6ec1e7ff75d2cacf6c5e9/a7c4e48f-2a1d-4880-a9e4-b6012c412442/preview.webp');
-    background-size: cover; /* Rende l'immagine di sfondo coprente */
-    background-repeat: no-repeat; 
-    background-position: center; 
-    filter: blur(3px); /* Applica il filtro di sfocatura */
-    z-index: -1; /* Assicura che l'elemento sia dietro il contenuto */
-}
+    .logo {
+        margin-right: 10px; /* Spaziatura tra il logo e il testo */
+    }
 
-.servizi {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    width: 100%;
-    position: fixed;
-    height: 60px;
-    top: 0;
-    left: 0;
-    padding: 0 20px; /* Aggiunto padding laterale per distanziare i pulsanti dai bordi */
-}
+    body {
+        background-color: beige;
+        margin: 0; 
+        padding: 0;
+        position: relative; /* Necessario per posizionare l'elemento pseudo */
+    }
 
-.servizio-btn {
-    background-color: transparent; /* Sfondo trasparente per i pulsanti */
-    color: white; /* Colore del testo */
-    padding: 10px 15px; /* Padding interno per i pulsanti */
-    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
-    border: none; /* Rimuove il bordo dai pulsanti */
-}
+    body::before {
+        content: ""; /* Necessario per creare un elemento pseudo */
+        position: fixed; /* Posiziona l'elemento in modo fisso */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(sfondo.jpg);
+        background-size: cover; /* Rende l'immagine di sfondo coprente */
+        background-repeat: no-repeat; 
+        background-position: center; 
+        filter: blur(3px); /* Applica il filtro di sfocatura */
+        z-index: -1; /* Assicura che l'elemento sia dietro il contenuto */
+    }
 
-.titolo{
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    text-align: center;
-    font-size: 40px;
-    color: white;
-}
+    .content {
+        position: relative; /* Necessario per posizionare il contenuto sopra lo sfondo */
+        color: white; /* Colore del testo per contrasto */
+        text-align: center;
+        padding: 50px;
+    }
 
-.form-container {
-    display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
-    justify-content: center; /* Centra i form orizzontalmente */
-    flex-wrap: wrap; /* Permette ai form di andare a capo se non c'è spazio sufficiente */
-    margin: 20px 0; /* Margine superiore e inferiore per distanziare i form dal titolo */
-}
 
-.stanze {
-    margin: 4px 0; /* Margine superiore e inferiore per distanziare il contenitore */
-    text-align: center; /* Centra il contenuto all'interno del contenitore */
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-}
+    /*BARRA RICERCA*/
 
-.titolo2 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
-    font-size: 25px;
-    color: white;
-    margin-bottom: 20px; /* Aggiungi margine inferiore per distanziare il titolo dai form */
-}
 
-.form-container {
-    display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
-    justify-content: center; /* Centra i form orizzontalmente */
-    gap: 20px; /* Spazio tra i form */
-}
+    .servizi {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        width: 100%;
+        position: fixed;
+        height: 90px;
+        top: 0;
+        left: 0;
+        padding: 0 20px;
+    }
 
-.stanza-form {
-    border-radius: 10px; /* Angoli arrotondati */
-    padding: 20px; /* Padding interno per i form */
-    width: 300px; /* Imposta una larghezza fissa per i form */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
-    background-color: #f9f9f9; /* Colore di sfondo chiaro per i form */
-    transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
-}
+    .servizio-btn {
+        background-color: transparent;
+        color: beige;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        font-size: 17px;
+    }
 
-.lista{
-    text-align: left;
-}
+    .titolo {
+        font-size: 50px;
+        color: beige;
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .titolo2 {
+        font-size: 20px;
+        color: beige;
+        margin: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 170px;
+    }
 
-.navigazione {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    width: 100%;
-    position: fixed;
-    height: 60px;
-    top: 0;
-    left: 0;
-    padding: 0 20px; /* Aggiunto padding laterale per distanziare i pulsanti dai bordi */
-}
 
-.nav-btn {
-    background-color: transparent; /* Sfondo trasparente per i pulsanti */
-    color: white; /* Colore del testo */
-    padding: 10px 15px; /* Padding interno per i pulsanti */
-    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
-    border: none; /* Rimuove il bordo dei pulsanti */
-    text-decoration: none; /* Rimuove la sottolineatura */
-}
+    /*STANZE*/
 
-.titolo3 {
-    text-align: center; /* Centra il titolo */
-    margin-top: 80px; /* Margine superiore per distanziare dal menu */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    color: white;
-}
 
-.login-form-container {
-    display: flex;
-    justify-content: center; /* Centra il form orizzontalmente */
-    align-items: center; /* Centra il form verticalmente */
-    height: 4   00px; /* Altezza del viewport meno l'altezza della barra di navigazione */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+    .form-container {
+        display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
+        justify-content: center; /* Centra i form orizzontalmente */
+        flex-wrap: wrap; /* Permette ai form di andare a capo se non c'è spazio sufficiente */
+        margin: 20px 0; /* Margine superiore e inferiore per distanziare i form dal titolo */
+    }
 
-.login-form {
-    border: 1px solid #ccc; /* Bordo grigio chiaro attorno al form */
-    border-radius: 10px; /* Angoli arrotondati */
-    padding: 40px; /* Padding interno per il form */
-    width: 400px; /* Larghezza del form */
-    background-color: #f9f9f9; /* Colore di sfondo chiaro per il form */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il form */
-    text-align: center; /* Centra il testo all'interno del form */
-}
+    .form-container {
+        display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
+        justify-content: center; /* Centra i form orizzontalmente */
+        gap: 20px; /* Spazio tra i form */
+    }
 
-.login-form h3 {
-    margin-top: 0; /* Rimuove il margine superiore dal titolo del form */
-    font-family: 'Arial', sans-serif; /* Font per il titolo */
-    color: #333; /* Colore del testo del titolo */
-}
+    .stanza-form {
+        border-radius: 20px; /* Angoli arrotondati */
+        padding: 20px; /* Padding interno per i form */
+        width: 300px; /* Imposta una larghezza fissa per i form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
+        background-color: beige; /* Colore di sfondo chiaro per i form */
+        transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
+    }
 
-.login-form label {
-    display: block; /* Rende le etichette a blocco per una migliore disposizione */
-    margin: 15 px 0 5px; /* Margine per distanziare le etichette dai campi di input */
-    font-weight: bold; /* Grassetto per le etichette */
-}
+    .stanze {
+        margin: 4px 0; /* Margine superiore e inferiore per distanziare il contenitore */
+        text-align: center; /* Centra il contenuto all'interno del contenitore */
+        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    }
 
-.login-form input {
-    width: 100%; /* Larghezza completa per i campi di input */
-    padding: 10px; /* Padding interno per i campi di input */
-    margin-bottom: 15px; /* Margine infe    riore per distanziare i campi */
-    border: 1px solid #ccc; /* Bordo grigio chiaro per i campi di input */
-    border-radius: 5px; /* Angoli arrotondati per i campi di input */
-}
+    .lista{
+        text-align: left;
+    }
 
-.login-form button {
-    background-color: #4CAF50; /* Colore di sfondo verde per il pulsante */
-    color: white; /* Colore del testo del pulsante */
-    padding: 10px 20px; /* Padding interno per il pulsante */
-    border: none; /* Rimuove il bordo del pulsante */
-    border-radius: 5px; /* Angoli arrotondati per il pulsante */
-    cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
-    font-size: 16px; /* Dimensione del font per il pulsante */
-    transition: background-color 0.3s; /* Transizione per il colore di sfondo */
-}
+    .navigazione {
+        display: flex;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        position: fixed;
+        height: 60px;
+        top: 0;
+        left: 0;
+        padding: 0 20px; /* Aggiunto padding laterale per distanziare i pulsanti dai bordi */
+    }
 
-.login-form button:hover {
-    background-color: #45a049; /* Colore di sfondo più scuro al passaggio del mouse */
-}
+    .nav-btn {
+        background-color: transparent; /* Sfondo trasparente per i pulsanti */
+        color: white; /* Colore del testo */
+        padding: 10px 15px; /* Padding interno per i pulsanti */
+        cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+        border: none; /* Rimuove il bordo dei pulsanti */
+        text-decoration: none; /* Rimuove la sottolineatura */
+    }
 
-.login-form p {
-    margin-top: 15px; /* Margine superiore per il paragrafo */
-}
+    .titolo3 {
+        text-align: center; /* Centra il titolo */
+        margin-top: 80px; /* Margine superiore per distanziare dal menu */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 40px;
+        color: white;
+    }
+
+
+    /*LOGIN*/
+
+
+    .login-form-container {
+        display: flex;
+        justify-content: center; /* Centra il form orizzontalmente */
+        align-items: center; /* Centra il form verticalmente */
+        height: 4   00px; /* Altezza del viewport meno l'altezza della barra di navigazione */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .login-form {
+        border: 1px solid #ccc; /* Bordo grigio chiaro attorno al form */
+        border-radius: 20px; /* Angoli arrotondati */
+        padding: 40px; /* Padding interno per il form */
+        width: 400px; /* Larghezza del form */
+        background-color: beige; /* Colore di sfondo chiaro per il form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il form */
+        text-align: center; /* Centra il testo all'interno del form */
+    }
+
+    .login-form h3 {
+        margin-top: 0; /* Rimuove il margine superiore dal titolo del form */
+        font-family: 'Arial', sans-serif; /* Font per il titolo */
+        color: #333; /* Colore del testo del titolo */
+    }
+
+    .login-form label {
+        display: block; /* Rende le etichette a blocco per una migliore disposizione */
+        margin: 15 px 0 5px; /* Margine per distanziare le etichette dai campi di input */
+        font-weight: bold; /* Grassetto per le etichette */
+    }
+
+    .login-form input {
+        width: 100%; /* Larghezza completa per i campi di input */
+        padding: 10px; /* Padding interno per i campi di input */
+        margin-bottom: 15px; /* Margine infe    riore per distanziare i campi */
+        border: 1px solid #ccc; /* Bordo grigio chiaro per i campi di input */
+        border-radius: 5px; /* Angoli arrotondati per i campi di input */
+    }
+
+    .login-form button {
+        background-color: #4CAF50; /* Colore di sfondo verde per il pulsante */
+        color: white; /* Colore del testo del pulsante */
+        padding: 10px 20px; /* Padding interno per il pulsante */
+        border: none; /* Rimuove il bordo del pulsante */
+        border-radius: 5px; /* Angoli arrotondati per il pulsante */
+        cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
+        font-size: 16px; /* Dimensione del font per il pulsante */
+        transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+    }
+
+    .login-form button:hover {
+        background-color: #45a049; /* Colore di sfondo più scuro al passaggio del mouse */
+    }
+
+    .login-form p {
+        margin-top: 15px; /* Margine superiore per il paragrafo */
+    }
+
+    .insta{
+        text-align: center;
+    }
+
+
+    /*CONTATTI*/
+
+    .form-container2 {
+        justify-content: center; /* Centra i form orizzontalmente */
+        flex-wrap: wrap; /* Permette ai form di andare a capo se non c'è spazio sufficiente */
+        margin: 20px 0; /* Margine superiore e inferiore per distanziare i form dal titolo */
+    }
+
+    .form-container2 span {
+
+        font-weight: bold;
+        color: black;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .contatti{
+        font-size: 14px;
+    }
+
+    .form-container2 {
+        display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
+        justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        max-width: 800px; /* Imposta la larghezza massima del contenitore */
+        margin: 20px auto; /* Centra il contenitore orizzontalmente e aggiunge un margine */
+    }
+
+    .titolo4{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .contatti-form {
+        border-radius: 20px; /* Angoli arrotondati */
+        padding: 30px; /* Padding interno per i form */
+        width: 350px; /* Imposta una larghezza fissa per i form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
+        background-color: beige; /* Colore di sfondo chiaro per i form */
+        transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
+    }
