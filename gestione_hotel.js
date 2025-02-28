@@ -15,15 +15,20 @@ function login(username, password) {
             throw new Error("Credenziali errate");
         }
 
-        console.log(`Login effettuato con successo! Ruolo: ${user.role}`);
+        console.log(`Login effettuato con successo! ${user.role}`);
         return user;
     } catch (error) {
         console.error(`Errore: ${error.message}`);
     }
-}
 
-// Esempi di utilizzo
-login("admin", "admin123"); // Login corretto
-login("user", "user123");  // Login corretto
-login("user", "wrongpass"); // Errore: Credenziali errate
-login("", ""); // Errore: Username e password sono obbligatori
+    document.addEventListener('DOMContentLoaded', function() {
+        const formContainer = document.querySelector('.form-container');
+    
+        window.addEventListener('scroll', function() {
+            const rect = formContainer.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                formContainer.classList.add('show');
+            }
+        });
+    });
+}

@@ -62,25 +62,26 @@
     .servizio-btn {
         background-color: transparent;
         color: beige;
-        padding: 10px 15px;
+        padding: 10px;
         cursor: pointer;
         border: none;
         font-size: 17px;
+        font-family: "Cinzel", serif;
+        
     }
 
     .titolo {
-        font-size: 50px;
         color: beige;
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
         text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Cinzel", serif;
+        font-size: 50px;
     }
     
     .titolo2 {
         font-size: 20px;
         color: beige;
-        margin: 0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: "Cinzel", serif;
         text-align: center;
         font-style: italic;
         margin-bottom: 170px;
@@ -136,24 +137,24 @@
 
     .nav-btn {
         background-color: transparent; /* Sfondo trasparente per i pulsanti */
-        color: white; /* Colore del testo */
+        color: beige; /* Colore del testo */
         padding: 10px 15px; /* Padding interno per i pulsanti */
         cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
         border: none; /* Rimuove il bordo dei pulsanti */
         text-decoration: none; /* Rimuove la sottolineatura */
     }
 
-    .titolo3 {
-        text-align: center; /* Centra il titolo */
-        margin-top: 80px; /* Margine superiore per distanziare dal menu */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 40px;
-        color: white;
-    }
-
 
     /*LOGIN*/
 
+
+    .titolo3 {
+        text-align: center; /* Centra il titolo */
+        margin-top: 80px; /* Margine superiore per distanziare dal menu */
+        font-family: "Cinzel", serif;
+        font-size: 40px;
+        color: beige;
+    }
 
     .login-form-container {
         display: flex;
@@ -164,56 +165,68 @@
     }
 
     .login-form {
-        border: 1px solid #ccc; /* Bordo grigio chiaro attorno al form */
+        border: 1px solid beige; /* Bordo grigio chiaro attorno al form */
         border-radius: 20px; /* Angoli arrotondati */
         padding: 40px; /* Padding interno per il form */
         width: 400px; /* Larghezza del form */
         background-color: beige; /* Colore di sfondo chiaro per il form */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per il form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
         text-align: center; /* Centra il testo all'interno del form */
     }
 
     .login-form h3 {
-        margin-top: 0; /* Rimuove il margine superiore dal titolo del form */
-        font-family: 'Arial', sans-serif; /* Font per il titolo */
-        color: #333; /* Colore del testo del titolo */
+        font-size: 22px;
+        margin-top: 0;
+        font-family: "Cinzel", serif;
+        color: black
     }
 
     .login-form label {
-        display: block; /* Rende le etichette a blocco per una migliore disposizione */
-        margin: 15 px 0 5px; /* Margine per distanziare le etichette dai campi di input */
-        font-weight: bold; /* Grassetto per le etichette */
+        display: block;
+        margin: 15 px 0 5px;
+        font-weight: bold;
+        font-family: "Cinzel", serif;
     }
 
     .login-form input {
-        width: 100%; /* Larghezza completa per i campi di input */
-        padding: 10px; /* Padding interno per i campi di input */
-        margin-bottom: 15px; /* Margine infe    riore per distanziare i campi */
-        border: 1px solid #ccc; /* Bordo grigio chiaro per i campi di input */
-        border-radius: 5px; /* Angoli arrotondati per i campi di input */
+        width: 100%;
+        padding: 10px; 
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        font-size: 15px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
     }
 
     .login-form button {
-        background-color: #4CAF50; /* Colore di sfondo verde per il pulsante */
-        color: white; /* Colore del testo del pulsante */
-        padding: 10px 20px; /* Padding interno per il pulsante */
-        border: none; /* Rimuove il bordo del pulsante */
-        border-radius: 5px; /* Angoli arrotondati per il pulsante */
-        cursor: pointer; /* Cambia il cursore quando si passa sopra il pulsante */
-        font-size: 16px; /* Dimensione del font per il pulsante */
-        transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+        background-color: #4CAF50;
+        color: beige;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+        font-family: "Cinzel", serif;
     }
 
     .login-form button:hover {
-        background-color: #45a049; /* Colore di sfondo più scuro al passaggio del mouse */
+        background-color: #36853a;
     }
 
     .login-form p {
-        margin-top: 15px; /* Margine superiore per il paragrafo */
+        margin-top: 15px;
     }
 
-    .insta{
-        text-align: center;
+    .fine{
+        font-family: "Cinzel", serif;
+        font-weight: bold;
+    }
+
+    .fine span{
+        font-style: italic;
     }
 
 
@@ -247,7 +260,8 @@
 
     .titolo4{
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
+        font-family: "Cinzel", serif;
     }
 
     .contatti-form {
@@ -257,4 +271,8 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
         background-color: beige; /* Colore di sfondo chiaro per i form */
         transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
+    }
+
+    .insta{
+        text-align: center;
     }
