@@ -116,7 +116,7 @@
     .stanze {
         margin: 4px 0; /* Margine superiore e inferiore per distanziare il contenitore */
         text-align: center; /* Centra il contenuto all'interno del contenitore */
-        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        font-family: "Cinzel", serif;
     }
 
     .lista{
@@ -155,124 +155,174 @@
         font-size: 40px;
         color: beige;
     }
-
+    
     .login-form-container {
-        display: flex;
-        justify-content: center; /* Centra il form orizzontalmente */
-        align-items: center; /* Centra il form verticalmente */
-        height: 4   00px; /* Altezza del viewport meno l'altezza della barra di navigazione */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex; /* Utilizza Flexbox per centrare il contenuto */
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
     }
-
+    
     .login-form {
-        border: 1px solid beige; /* Bordo grigio chiaro attorno al form */
         border-radius: 20px; /* Angoli arrotondati */
         padding: 40px; /* Padding interno per il form */
         width: 400px; /* Larghezza del form */
         background-color: beige; /* Colore di sfondo chiaro per il form */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
         text-align: center; /* Centra il testo all'interno del form */
+        height: fit-content;
     }
-
+    
     .login-form h3 {
         font-size: 22px;
         margin-top: 0;
         font-family: "Cinzel", serif;
-        color: black
+        color: black;
     }
-
+    
     .login-form label {
         display: block;
-        margin: 15 px 0 5px;
+        margin: 15px 0 5px;
         font-weight: bold;
         font-family: "Cinzel", serif;
     }
-
+    
     .login-form input {
-        width: 100%;
-        padding: 10px; 
+        width: 90%;
+        padding: 10px;
         margin-bottom: 15px;
         border: 1px solid #ccc;
         border-radius: 10px;
         background-color: rgb(255, 255, 255);
         font-size: 15px;
-        font-family:Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
     }
-
+    
     .login-form button {
-        background-color: #4CAF50;
-        color: beige;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s;
-        font-family: "Cinzel", serif;
+        background-color: #4CAF50; /* Colore di sfondo del pulsante */
+        color: beige; /* Colore del testo del pulsante */
+        padding: 10px 20px; /* Padding del pulsante */
+        border: none; /* Rimuove il bordo del pulsante */
+        border-radius: 10px; /* Arrotonda gli angoli del pulsante */
+        cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        font-size: 16px; /* Dimensione del font del pulsante */
+        transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+        font-family: "Cinzel", serif; /* Font per il pulsante */
     }
-
+    
     .login-form button:hover {
-        background-color: #36853a;
+        background-color: #36853a; 
     }
-
+    
     .login-form p {
-        margin-top: 15px;
+        margin-top: 0; /* Rimuove lo spazio sopra il paragrafo */
+        margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
     }
-
-    .fine{
+    
+    .fine {
         font-family: "Cinzel", serif;
         font-weight: bold;
+        border-bottom: 0px;
     }
-
-    .fine span{
+    
+    .fine span {
         font-style: italic;
     }
 
 
     /*CONTATTI*/
 
-    .form-container2 {
-        justify-content: center; /* Centra i form orizzontalmente */
-        flex-wrap: wrap; /* Permette ai form di andare a capo se non c'è spazio sufficiente */
-        margin: 20px 0; /* Margine superiore e inferiore per distanziare i form dal titolo */
+    .contatti {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 80px;
+        padding: 0 20px;
+        color: beige;
+        background-color: rgb(0, 0, 0);
     }
-
-    .form-container2 span {
-
-        font-weight: bold;
-        color: black;
-        font-size: 16px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    .contatti{
-        font-size: 14px;
-    }
-
-    .form-container2 {
-        display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
-        justify-content: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        max-width: 800px; /* Imposta la larghezza massima del contenitore */
-        margin: 20px auto; /* Centra il contenitore orizzontalmente e aggiunge un margine */
-    }
-
+    
     .titolo4{
         text-align: center;
         font-size: 20px;
         font-family: "Cinzel", serif;
+        color: beige;
     }
 
-    .contatti-form {
-        border-radius: 20px; /* Angoli arrotondati */
-        padding: 30px; /* Padding interno per i form */
-        width: 350px; /* Imposta una larghezza fissa per i form */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
-        background-color: beige; /* Colore di sfondo chiaro per i form */
-        transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
+    .contatti span {
+        color: beige;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .insta{
+    .icone{
         text-align: center;
+    }
+
+    /*REGISTRAZIONE*/
+
+    .reg-form-container {
+        display: flex; /* Utilizza Flexbox per centrare il contenuto */
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+    }
+    
+    .reg-form {
+        border-radius: 20px; /* Angoli arrotondati */
+        padding: 40px; /* Padding interno per il form */
+        width: 400px; /* Larghezza del form */
+        background-color: beige; /* Colore di sfondo chiaro per il form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
+        text-align: center; /* Centra il testo all'interno del form */
+        height: fit-content;
+    }
+    
+    .reg-form h3 {
+        font-size: 22px;
+        margin-top: 0;
+        font-family: "Cinzel", serif;
+        color: black;
+    }
+    
+    .reg-form label {
+        display: block;
+        margin: 15px 0 5px;
+        font-weight: bold;
+        font-family: "Cinzel", serif;
+    }
+    
+    .reg-form input {
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    .reg-form button {
+        background-color: #4CAF50; /* Colore di sfondo del pulsante */
+        color: beige; /* Colore del testo del pulsante */
+        padding: 10px 20px; /* Padding del pulsante */
+        border: none; /* Rimuove il bordo del pulsante */
+        border-radius: 10px; /* Arrotonda gli angoli del pulsante */
+        cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+        font-size: 16px; /* Dimensione del font del pulsante */
+        transition: background-color 0.3s; /* Transizione per il colore di sfondo */
+        font-family: "Cinzel", serif; /* Font per il pulsante */
+    }
+    
+    .reg-form button:hover {
+        background-color: #36853a; 
+    }
+    
+    .reg-form p {
+        margin-top: 0; /* Rimuove lo spazio sopra il paragrafo */
+        margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
     }
