@@ -1,9 +1,18 @@
-    html, body {
-        height: 90%;
-        margin: 0; 
-        padding: 0;
-    }
+* {
+    box-sizing: border-box; /* Imposta il box-sizing per tutti gli elementi */
+}
 
+html, body {
+    height: 100%; /* Imposta l'altezza al 100% */
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
+}
+
+body {
+    background-color: beige;
+    position: relative; /* Necessario per posizionare l'elemento pseudo */
+}
     img.logo {
         width: 100px;  /* Regola la larghezza */
         height: auto;  /* Mantiene le proporzioni */
@@ -101,16 +110,15 @@
     .form-container {
         display: flex; /* Utilizza Flexbox per disporre i form in orizzontale */
         justify-content: center; /* Centra i form orizzontalmente */
-        gap: 20px; /* Spazio tra i form */
+        gap: 30px; /* Spazio tra i form */
     }
 
     .stanza-form {
         border-radius: 20px; /* Angoli arrotondati */
         padding: 20px; /* Padding interno per i form */
-        width: 300px; /* Imposta una larghezza fissa per i form */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombra leggera per i form */
+        width: 360px; /* Imposta una larghezza fissa per i form */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per i form */
         background-color: beige; /* Colore di sfondo chiaro per i form */
-        transition: box-shadow 0.3s; /* Transizione per l'ombreggiatura */
     }
 
     .stanze {
@@ -165,7 +173,7 @@
     .login-form {
         border-radius: 20px; /* Angoli arrotondati */
         padding: 40px; /* Padding interno per il form */
-        width: 400px; /* Larghezza del form */
+        width: 450px; /* Larghezza del form */
         background-color: beige; /* Colore di sfondo chiaro per il form */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
         text-align: center; /* Centra il testo all'interno del form */
@@ -273,7 +281,7 @@
     .reg-form {
         border-radius: 20px; /* Angoli arrotondati */
         padding: 40px; /* Padding interno per il form */
-        width: 400px; /* Larghezza del form */
+        width: 490px; /* Larghezza del form */
         background-color: beige; /* Colore di sfondo chiaro per il form */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
         text-align: center; /* Centra il testo all'interno del form */
