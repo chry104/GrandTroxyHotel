@@ -1,5 +1,7 @@
 * {
-    box-sizing: border-box; /* Imposta il box-sizing per tutti gli elementi */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 html, body {
@@ -248,35 +250,59 @@ body {
 
     .contatti {
         display: flex;
-        align-items: center;
+        flex-direction: column; /* Dispone gli elementi in colonna */
+        align-items: center; /* Centra orizzontalmente */
+        justify-content: flex-start; /* Allinea gli elementi all'inizio */
         width: 100%;
         bottom: 0;
         left: 0;
-        height: 80px;
-        padding: 0 20px;
+        height: 16%; /* Aumenta l'altezza per centrare meglio */
         color: beige;
         background-color: rgb(0, 0, 0);
+        text-align: center; /* Centra il testo */
+        padding: 10px 0; /* Aggiunge un po' di padding */
     }
     
-    .titolo4{
-        text-align: center;
-        font-size: 130%;
+    .contatti .titolo4 {
+        margin-bottom: 5px; /* Spazio tra il titolo e il resto del testo */
+    }
+    
+    .contatti a {
+        text-decoration: none; /* Rimuove la sottolineatura */
+        color: beige; /* Mantiene il colore del testo coerente */
+    }
+    
+    .contatti span:hover {
+        text-decoration: underline; /* (Opzionale) Aggiunge la sottolineatura solo al passaggio del mouse */
+    }
+    
+    .contatti .testo {
+        display: flex; /* Usa flexbox per disporre gli elementi in linea */
+        justify-content: center; /* Centra orizzontalmente */
+        margin-top: 5px; /* Spazio tra il titolo e il testo */
+        white-space: nowrap; /* Impedisce il wrapping del testo */
+    }
+    
+    .contatti .testo a, .contatti .testo span {
+        display: inline-block; /* Mantiene gli elementi in linea */
+        margin-right: 5%; /* Spazio tra gli elementi in percentuale */
+    }
+    
+    .titolo4 {
+        font-size: 155%;
         font-family: "Cinzel", serif;
         color: beige;
     }
 
-    .contatti span {
-        color: beige;
-        font-weight: bold;
-        font-size: 100%;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    .testo{
+        font-family: "Cinzel", serif;
+        font-size: 95%;
     }
 
-    .icone{
-        text-align: center;
+    .contatti .testo span{
+        font-size: 120%;
     }
-
-    /*REGISTRAZIONE*/
+    
 
     /* REGISTRAZIONE */
 
@@ -342,4 +368,12 @@ body {
 .reg-form p {
     margin-top: 0; /* Rimuove lo spazio sopra il paragrafo */
     margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
+}
+
+/*FURY*/
+
+.fury {
+    justify-content: center; /* Centra orizzontalmente */
+    text-align: center; /* Centra verticalmente */
+    background-color: beige;
 }

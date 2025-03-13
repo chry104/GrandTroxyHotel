@@ -11,15 +11,17 @@
     <title>Grand Hotel Troxy</title>
 </head>
 
-<body>
+<div class="servizi">
     <div class="servizi">
         <img src="logo.png" class="logo" alt="Grand Troxy Hotel">
         <div style="font-family: sans-serif;">
             <a href="index.html" class="servizio-btn">HOME</a>
             <a href="login.html" class="servizio-btn">LOGIN</a>
-            <a href="index.html" class="servizio-btn">CONTATTI</a>
+            <a href="#contatti" class="servizio-btn">CONTATTI</a>
         </div>
+        
     </div>
+</div>
 
     <div class="titolo3">
         <h1>Accedi</h1>
@@ -74,7 +76,7 @@
             const message = document.getElementById("message");
 
             if (!email || !password) {
-                message.textContent = "Inserire email e password!";
+                message.textContent = "Inserire email e password";
                 message.style.color = "red";
                 return;
             }
@@ -89,11 +91,11 @@
 
             if (user) {
                 message.style.color = "green";
-                message.textContent = "Login riuscito!";
+                message.textContent = "Login riuscito";
                 setTimeout(() => { window.location.href = "index.html"; }, 2000);
             } else {
                 message.style.color = "red";
-                message.textContent = "Credenziali errate!";
+                message.textContent = "Credenziali errate";
             }
         } 
     </script>
