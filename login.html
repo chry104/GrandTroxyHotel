@@ -11,17 +11,15 @@
     <title>Grand Hotel Troxy</title>
 </head>
 
-<div class="servizi">
+<body>
     <div class="servizi">
         <img src="logo.png" class="logo" alt="Grand Troxy Hotel">
         <div style="font-family: sans-serif;">
             <a href="index.html" class="servizio-btn">HOME</a>
             <a href="login.html" class="servizio-btn">LOGIN</a>
-            <a href="#contatti" class="servizio-btn">CONTATTI</a>
+            <a href="index.html" class="servizio-btn">CONTATTI</a>
         </div>
-        
     </div>
-</div>
 
     <div class="titolo3">
         <h1>Accedi</h1>
@@ -37,13 +35,13 @@
             <button type="button" onclick="login()">Accedi</button>
             <p id="message"></p>
             <div class="fine">
-            <p>Non hai già un account? <span><a href="registrazione.html">Registrati qui</a></span></p>
+                <p>Non hai già un account? <span><a href="registrazione2.html">Registrati qui</a></span></p>
             </div>
         </form>
     </div>
 
     <script>                                                                                        //TOFFOLO
-        
+
         async function sha256(text) {
             const encoder = new TextEncoder();
             const data = encoder.encode(text);
@@ -51,18 +49,18 @@
             const hashArray = Array.from(new Uint8Array(hashBuffer));
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
-
+        let userIsLoggedIn = false;
+       
         async function loadCSV() {
             try {
-            //const response = await fetch("privato\data\users.csv");
-             const response = await fetch("privato/data/javascriptimpiccatiFenoli.csv");
-             // prova a ridarmi un errore del cazzo tipo Hexadecimal digit expected troia di js 
+                const response = await fetch("./privato/data/javascriptimpiccatiFenoli.csv");
+                // prova a ridarmi un errore del cazzo tipo Hexadecimal digit expected troia di js 
                 if (!response.ok) throw new Error("Errore nel caricamento del CSV");
                 const text = await response.text();
                 console.log("File CSV caricato:\n", text);
                 return text.split("\n").slice(1).map(line => {
-                    const [emailHash, passwordHash] = line.trim().split(",");
-                    return { emailHash, passwordHash };
+                    const [id, emailHash, passwordHash, nome, cognome, data_nascita, telefono] = line.trim().split(",");
+                    return { id, emailHash, passwordHash, nome, cognome, data_nascita, telefono };
                 });
             } catch (error) {
                 console.error("Errore:", error);
@@ -74,9 +72,9 @@
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
             const message = document.getElementById("message");
-
+          
             if (!email || !password) {
-                message.textContent = "Inserire email e password";
+                message.textContent = "Inserire email e password!";
                 message.style.color = "red";
                 return;
             }
@@ -91,14 +89,18 @@
 
             if (user) {
                 message.style.color = "green";
-                message.textContent = "Login riuscito";
+                message.textContent = "Login riuscito!";
+                localStorage.setItem('userID', user.id);
+                localStorage.setItem('userIsLoggedIn', 'true'); 
                 setTimeout(() => { window.location.href = "index.html"; }, 2000);
+                return userIsLoggedIn = true;
             } else {
                 message.style.color = "red";
-                message.textContent = "Credenziali errate";
+                message.textContent = "Credenziali errate!";
             }
         } 
     </script>
 
 </body>
+
 </html>

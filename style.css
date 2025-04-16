@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    font-family: "Cinzel", serif;
 }
 
 html, body {
@@ -9,6 +9,7 @@ html, body {
     margin: 0; 
     padding: 0;
     overflow-x: hidden; /* Nasconde lo scorrimento orizzontale */
+    font-family: "Cinzel", serif;
 }
 
 body {
@@ -75,7 +76,7 @@ body {
         padding: 10px;
         cursor: pointer;
         border: none;
-        font-size: 100%;
+        font-size: 110%;
         font-family: "Cinzel", serif;
         
     }
@@ -99,6 +100,28 @@ body {
 
 
     /*STANZE*/
+
+    .stanza-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+    
+    .stanza-form {
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0.2%;
+        background-color: #f8f8f8;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .stanza-link:hover .stanza-form {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+    
+
 
 
     .form-container {
@@ -210,7 +233,7 @@ body {
         border-radius: 10px;
         background-color: rgb(255, 255, 255);
         font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: "Cinzel", serif;
         font-weight: bold;
     }
     
@@ -311,6 +334,7 @@ body {
     justify-content: center; /* Centra orizzontalmente */
     align-items: center; /* Centra verticalmente */
     margin-bottom: 20px; /* Aggiungi margine inferiore per distanziare dal bordo inferiore */
+    
 }
 
 .reg-form {
@@ -321,6 +345,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Ombra leggera per il form */
     text-align: center; /* Centra il testo all'interno del form */
     height: fit-content;
+    
 }
 
 .reg-form h3 {
@@ -345,7 +370,7 @@ body {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Cinzel", serif;
     font-weight: bold;
 }
 
@@ -370,10 +395,204 @@ body {
     margin-bottom: 0; /* Rimuove lo spazio sotto il paragrafo */
 }
 
+
+
 /*FURY*/
+/*PRENOTAZIONE1_MOD*/
+
+/* Stile per il contenitore */
+.foto-mod {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-mod img {
+    width: 30%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15%;
+    border: 3px solid beige;
+    transition: transform 0.3s ease;
+}
+
+.foto-mod img:hover {
+    transform: scale(1.1);
+}
+
+/* Prevenire sovrapposizione alla barra */
+.foto-mod img:hover {
+    z-index: 9;
+}
+
+/* Posizionamento generale */
+.container-mod {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18%;
+    padding: 2%;
+    font-family: "Cinzel", serif;
+}
+
+/* Form di prenotazione */
+.login-form-container-mod {
+    flex: 1;
+    max-width: 30%;
+}
+
+.pre1-mod {
+    border-radius: 25px;
+    padding: 3%;
+    background-color: beige;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pre1-mod label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.pre1-mod input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.pre1-mod button {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.pre1-mod button:hover {
+    background-color: #36853a;
+}
 
 .fury {
     justify-content: center; /* Centra orizzontalmente */
     text-align: center; /* Centra verticalmente */
     background-color: beige;
+}
+
+/*PRENOTAZIONE1*/
+
+/* Stile per il contenitore */
+.foto {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.foto img {
+    width: 30%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15%;
+    border: 3px solid beige;
+    transition: transform 0.3s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.1);
+}
+
+/* Prevenire sovrapposizione alla barra */
+.foto img:hover {
+    z-index: 9;
+}
+
+/* Posizionamento generale */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18%;
+    padding: 2%;
+    font-family: "Cinzel", serif;
+}
+
+.pren {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.4%;
+}
+
+/* Form di prenotazione */
+.pren1-form-container {
+    flex: 1;
+    max-width: 61.5%;
+    font-family: "Cinzel", serif;
+    margin-left: 3.5%;
+}
+
+.pren1-form-container2 {
+    width: 45%;
+    max-width: 35%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: -1.9%;
+    font-family: "Cinzel", serif;
+}
+
+.pre1 {
+    border-radius: 25px;
+    padding: 3%;
+    background-color: beige;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pre1 label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-weight: bold;
+}
+
+.pre1 label span{
+    font-style: italic;
+}
+
+.pre1 input {
+    width: 90%;
+    padding: 10px;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center  ;
+}
+
+.pre1 button {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 2%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.pre1 button:hover {
+    background-color: #36853a;
+}
+
+#pagamento{
+    font-size: 110%;
+    font-style: bold;
 }

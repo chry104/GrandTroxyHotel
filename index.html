@@ -35,6 +35,24 @@
     <br>
     <br>
     <br>
+    <script>
+        window.onload = function() {
+            const userIsLoggedIn = localStorage.getItem('userIsLoggedIn');
+            const userID = localStorage.getItem("userID");
+            // Trova il pulsante login/account
+            const loginButton = document.querySelector('.servizio-btn[href="login.html"]');
+    
+            if (userIsLoggedIn === 'true') {
+                // Cambia il pulsante Login in Account
+                loginButton.textContent = 'Account';
+                loginButton.href = 'account.html'; // Puoi indirizzare l'utente alla pagina dell'account
+            } else {
+                // Se non loggato, lascia il pulsante Login
+                loginButton.textContent = 'Login';
+                loginButton.href = 'login.html';
+            }
+        }
+    </script>
 
     <div class="titolo">
         <h1>Grand Troxy Hotel</h1>
@@ -50,6 +68,7 @@
     <div class="stanze">    
         
         <div class="form-container"> <!-- Aggiungi un contenitore per i form -->
+            <a href="prenotazione1.html" class="stanza-link">
             <form class="stanza-form" id="standard">
                 
             <h3>Stanza Standard</h3>
@@ -63,9 +82,14 @@
                 <li>Set cortesia</li>
                 <li>TV 55 pollici</li>
             </div>
-            </form>
-    
+            </a>
+            <!--<br>
+            <button type="button" class="servizio-btn" onclick="location.href='prenotazione1.html'">Prenota ora</button>
+        -->
+        </form>
+        <a href="prenotazione2.html" class="stanza-link">
             <form class="stanza-form" id="exclusive">
+                
                 <h3>Stanza Exclusive</h3>
                 <p>Prezzo: €200 a notte</p>
                 <p>Caratteristiche</p>
@@ -78,8 +102,9 @@
                     <li>TV 75 pollici</li>
                     <li>Minibar incluso</li>
                 </div>
+            </a>
             </form>
-
+            <a href="prenotazione3.html" class="stanza-link">
             <form class="stanza-form" id="premium">
                 <h3>Stanza Premium</h3>
                 <p>Prezzo: 300€ a notte</p>
@@ -95,6 +120,7 @@
                     <li>Idromassaggio</li>
                     <li>Servizio in camera</li>
                 </div>
+            </a>
             </form>
         </div>                        
     </div>
@@ -118,4 +144,5 @@
 
     <script src="gestione_hotel.js"></script>
 </body>
+
 </html>

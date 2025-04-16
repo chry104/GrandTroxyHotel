@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grand Hotel Troxy</title>
+</head>
+
+<body>
+    <div class="servizi">
+        <img src="logo.png" class="logo" alt="Grand Troxy Hotel">
+        <div style="font-family: sans-serif;">
+            <a href="index.html" class="servizio-btn">HOME</a>
+            <a href="index.html" class="servizio-btn">ACCOUNT</a>
+            <a href="#contatti" class="servizio-btn">CONTATTI</a>
+        </div>
+    </div>
+
+    <div class="titolo3">
+        <h1>Prenota stanza Standard </h1>
+    </div>
+
+    <div class="foto">
+        <img src="standard1.png" alt="foto 1">
+        <img src="standard2.png" alt="foto 2">
+        <img src="standard3.png" alt="foto 3">
+    </div>
+
+    <br>
+    <br>
+
+    <div class="pren">
+
+    <div class="pren1-form-container">
+        <form class="pre1" id="pre1">
+            <h2>Prenotazione Stanza</h2>
+            <label for="checkin">Data Check-in</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">Data Check-out</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="ospiti">Persone</label>
+            <input type="number" id="ospiti" name="ospiti" min="1" required>
+            <label for="ospiti">Numero stanze</label>
+            <input type="number" id="numero" name="numero" min="1" required>
+            <label for="pagamento">Metodo di pagamento</label>
+                <select id="pagamento" name="pagamento">
+                    <option value="carta">Carta di credito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bonifico">Bonifico bancario</option>
+                </select>
+        </form>
+    </div>
+
+    <div class="pren1-form-container2">
+        <form class="pre1" id="pre1_1">
+            <h2>Dettagli della Prenotazione</h2>
+            <label for="stanza">Tipo di stanza: <span>STANDARD</span></label>
+            <label for="prezzo">Prezzo a notte: <span>150€</span></label>
+            <label>Aria condizionata</label>
+            <label>Letto matrimoniale</label>
+            <label>Wi-Fi gratuito</label>
+            <label>Set cortesia</label>
+            <label>TV 55 pollici</label>
+            
+            <label for="costo">Costo totale</label>
+            <input type="text" id="costo" name="costo" value="€150" readonly>
+            
+            <label for="pagamento-selezionato">Metodo di pagamento</label>
+            <input type="text" id="pagamento-selezionato" name="pagamento-selezionato" readonly>
+            <button type="submit">Prenota</button>
+        </form>
+    </div>
+
+    </div>
+
+    <script>
+        function aggiornaMetodoPagamento() {
+            var metodo = document.getElementById("pagamento").value;
+            document.getElementById("pagamento-selezionato").value = metodo;
+        }
+    </script>
+
+</body>
+</html>
